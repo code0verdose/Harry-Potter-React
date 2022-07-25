@@ -1,5 +1,8 @@
 import React from 'react';
 import './Main.css'
+import Item from "../Item/Item";
+import '../../data/data.js'
+import {data} from "../../data/data";
 
 const Main = () => {
     return (
@@ -8,7 +11,11 @@ const Main = () => {
                 <section className="hero">
                     <div className="container">
                         <div className="grid">
-
+                            {data
+                                .map((elem, index) => (
+                                <Item key={index} picture={elem.image} nameTitle={elem.name} actor={elem.actor} gender={elem.gender}
+                                house={elem.house} wand={elem.wand} alive={elem.alive}/>
+                                ))}
                         </div>
                         <div className="likes">
                             <button className="show-liked btn">
