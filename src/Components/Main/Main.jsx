@@ -13,7 +13,8 @@ const Main = ({searchItem, select}) => {
                         <div className="grid">
                             {data
                                 .filter(value =>
-                                    value.name.toLowerCase().includes(searchItem.toLowerCase().trim()))
+                                    value.name.toLowerCase().includes(searchItem.toLowerCase().trim()) && value.house.includes(select)
+                                )
                                 .map((elem, index) => (
                                     <Item key={index} picture={elem.image} nameTitle={elem.name}
                                           actor={elem.actor} gender={elem.gender}
