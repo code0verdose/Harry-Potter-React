@@ -11,31 +11,7 @@ const Header = () => {
                         <span className="header__subtitle"
                         >View all characters from the Harry Potter universe</span>
                     </a>
-                    <form action="#" className="header__form form">
-                        <div className="form__name">
-                            <span className="form__text">Name</span>
-                            <input
-                                className="form__input"
-                                type="text"
-                                required
-                                placeholder="Hermione"
-                                id="input"
-                            />
-                        </div>
-                        <div className="form__school">
-                            <span className="form__text">School</span>
-                            <select className="form__select" name="school" required id="school">
-                                <option value="">Choose one</option>
-                                <option value="Gryffindor">Gryffindor</option>
-                                <option value="Slytherin">Slytherin</option>
-                                <option value="Hufflepuff">Hufflepuff</option>
-                                <option value="Ravenclaw">Ravenclaw</option>
-                            </select>
-                        </div>
-                    </form>
-
                 </div>
-                <hr/>
                 <svg width="24" height="23" className="hidden">
                     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23" id="empty-like">
                         <path fillRule="evenodd" clipRule="evenodd"
