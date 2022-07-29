@@ -1,24 +1,25 @@
 import React from 'react';
 import './Main.css'
 import Item from "../Item/Item";
-import '../../data/data.js'
-import {data} from "../../data/data";
+import { Link } from "react-router-dom";
 
-const Main = ({searchItem, select}) => {
+const Main = ({filteredData, like, dislike, liked}) => {
     return (
         <>
             <main>
                 <section className="hero">
                     <div className="container">
                         <div className="grid">
-                            {data
-                                .filter(value =>
-                                    value.name.toLowerCase().includes(searchItem.toLowerCase().trim()) && value.house.includes(select)
-                                )
+                            {filteredData
                                 .map((elem, index) => (
-                                    <Item key={index} picture={elem.image} nameTitle={elem.name}
-                                          actor={elem.actor} gender={elem.gender}
-                                          house={elem.house} wand={elem.wand} alive={elem.alive}/>
+                                    <Item
+                                        isLiked={liked.includes(elem.name)}
+                                        like={like}
+                                        dislike={dislike}
+                                        liked={liked}
+                                        key={index}
+                                        {...elem}
+                                    />
                                 ))}
                         </div>
                         <div className="likes">
@@ -26,7 +27,7 @@ const Main = ({searchItem, select}) => {
                                 <svg className="show">
                                     <use href="#like"></use>
                                 </svg>
-                                Show Liked
+                                <Link to="/favorite"> Show Liked </Link>
                             </button>
                         </div>
                     </div>
