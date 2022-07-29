@@ -49,3 +49,11 @@ p {
     line-height: 28px;
     font-weight: 400;
 }
+
+@media (max-width: 756px) {
+    .grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+}

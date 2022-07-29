@@ -7,7 +7,7 @@ const Item = ({image, wand, alive, gender, house, name, actor, like, dislike, is
     return (
         <div className='card'>
             <div className="card__picture">
-                <img className="card__img" width='334' height='192' src={process.env.PUBLIC_URL + `./images/${image}`} alt=""/>
+                <img className="card__img" src={process.env.PUBLIC_URL + `/images/${image}`} alt=""/>
             </div>
             <div className="like__container">
                 <button onClick={() => isLiked ? dislike(name) : like(name)}>
