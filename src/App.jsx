@@ -20,7 +20,7 @@ function App() {
 
     return (
         <React.StrictMode>
-            <BrowserRouter>
+            <BrowserRouter basename="/Harry-Potter-React">
                 <Routes>
                     <Route path='/'
                            element={

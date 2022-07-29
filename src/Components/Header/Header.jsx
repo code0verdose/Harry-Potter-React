@@ -1,16 +1,17 @@
 import React from 'react';
 import './Header.css'
+import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
         <>
             <header className="header">
                 <div className="container">
-                    <a href="">
+                    <Link to="/">
                         <h1 className="haeder__title">Harry Potter</h1>
                         <span className="header__subtitle"
                         >View all characters from the Harry Potter universe</span>
-                    </a>
+                    </Link>
                 </div>
                 <svg width="24" height="23" className="hidden">
                     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23" id="empty-like">
